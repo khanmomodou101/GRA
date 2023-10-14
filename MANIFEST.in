@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include gra *.css
+recursive-include gra *.csv
+recursive-include gra *.html
+recursive-include gra *.ico
+recursive-include gra *.js
+recursive-include gra *.json
+recursive-include gra *.md
+recursive-include gra *.png
+recursive-include gra *.py
+recursive-include gra *.svg
+recursive-include gra *.txt
+recursive-exclude gra *.pyc
