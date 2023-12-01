@@ -1,0 +1,343 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "autoincrement",
+ "creation": "2023-10-15 03:10:51.585120",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "image",
+  "category_of_applicant",
+  "part_a__personal_details_tab",
+  "first_name",
+  "column_break_bln2y",
+  "middle_name",
+  "column_break_nnwow",
+  "last_name",
+  "full_name",
+  "section_break_hjx8q",
+  "email",
+  "mothers_maiden_first_name",
+  "column_break_rpiux",
+  "phone_number",
+  "mothers_maiden_last_name",
+  "section_break_4yod6",
+  "citizenship",
+  "id_card_number",
+  "id_attachment",
+  "column_break_wq9v5",
+  "country_of_residence",
+  "passport_number",
+  "attach_passport",
+  "amended_from",
+  "section_break_g4q2h",
+  "gender",
+  "marital_status",
+  "column_break_ji0qb",
+  "date_of_birth",
+  "employment_status",
+  "business_details_tab",
+  "business_name",
+  "business_registration_date",
+  "business_start_date",
+  "column_break_ofmzv",
+  "trading_name",
+  "certificate_of_incorporation_number",
+  "column_break_8zbzi",
+  "business_registration_number",
+  "importer_id_number",
+  "nature_of_business",
+  "section_break_kbqob",
+  "start_date",
+  "column_break_nuqly",
+  "end_date",
+  "tin"
+ ],
+ "fields": [
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "label": "First Name"
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name"
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Full Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "TIN Application",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "category_of_applicant",
+   "fieldtype": "Select",
+   "label": "Category of Applicant",
+   "options": "Individual (Resident)\nIndividual (Non-Resident)\nCompany (Resident)\nCompany (Non-Resident)\nPartnership (Resident)\nPartnership (Non-Resident)\nTrusts\nGovernment Ministry, Local Authority, or Other Government Institution\nClub, Association, etc.\nIndividual/Organization Entitled to Diplomatic Privileges"
+  },
+  {
+   "fieldname": "part_a__personal_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Personal Details"
+  },
+  {
+   "fieldname": "column_break_bln2y",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_nnwow",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "middle_name",
+   "fieldtype": "Data",
+   "label": "Middle Name"
+  },
+  {
+   "fieldname": "mothers_maiden_first_name",
+   "fieldtype": "Data",
+   "label": "Mother's Maiden First Name"
+  },
+  {
+   "fieldname": "mothers_maiden_last_name",
+   "fieldtype": "Data",
+   "label": "Mother's Maiden Last Name"
+  },
+  {
+   "fieldname": "citizenship",
+   "fieldtype": "Select",
+   "label": "Citizenship",
+   "options": "\nGambian\nNon-Gambian"
+  },
+  {
+   "fieldname": "country_of_residence",
+   "fieldtype": "Data",
+   "label": "Country Of Residence"
+  },
+  {
+   "description": "(for non-citizens and non-residents, attach photocopy of passport)",
+   "fieldname": "passport_number",
+   "fieldtype": "Data",
+   "label": "Passport Number"
+  },
+  {
+   "fieldname": "section_break_hjx8q",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_wq9v5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.citizenship == \"Non-Gambian\"",
+   "fieldname": "attach_passport",
+   "fieldtype": "Attach Image",
+   "label": "Attach Passport"
+  },
+  {
+   "description": "(for individual citizens and residents)",
+   "fieldname": "id_card_number",
+   "fieldtype": "Data",
+   "label": "ID Card Number"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Gender",
+   "options": "\nMale\nFemale"
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of Birth"
+  },
+  {
+   "fieldname": "section_break_g4q2h",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_ji0qb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.citizenship == \"Gambian\"",
+   "description": "(ATTACH COPY OF BIRTH CERT. or ID)",
+   "fieldname": "id_attachment",
+   "fieldtype": "Attach Image",
+   "label": "ID Attachment"
+  },
+  {
+   "fieldname": "marital_status",
+   "fieldtype": "Select",
+   "label": "Marital Status",
+   "options": "\nMarried\nNot Married"
+  },
+  {
+   "fieldname": "employment_status",
+   "fieldtype": "Select",
+   "label": "Employment Status",
+   "options": "\nEmployed\nSelf-Employed"
+  },
+  {
+   "fieldname": "business_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Business Details"
+  },
+  {
+   "fieldname": "business_name",
+   "fieldtype": "Data",
+   "label": "Business Name"
+  },
+  {
+   "fieldname": "trading_name",
+   "fieldtype": "Data",
+   "label": "Trading Name"
+  },
+  {
+   "fieldname": "business_registration_number",
+   "fieldtype": "Data",
+   "label": "Business Registration Number"
+  },
+  {
+   "fieldname": "business_registration_date",
+   "fieldtype": "Date",
+   "label": "Business Registration Date"
+  },
+  {
+   "fieldname": "importer_id_number",
+   "fieldtype": "Data",
+   "label": "Importer ID Number"
+  },
+  {
+   "fieldname": "certificate_of_incorporation_number",
+   "fieldtype": "Data",
+   "label": "Certificate of Incorporation Number"
+  },
+  {
+   "fieldname": "business_start_date",
+   "fieldtype": "Data",
+   "label": "Business Start Date"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "nature_of_business",
+   "fieldtype": "Data",
+   "label": "Nature of Business"
+  },
+  {
+   "fieldname": "column_break_ofmzv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_8zbzi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_kbqob",
+   "fieldtype": "Section Break",
+   "label": "Accounting Period"
+  },
+  {
+   "fieldname": "column_break_nuqly",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "label": "Profile Photo"
+  },
+  {
+   "fetch_from": "amended_from.amended_from",
+   "fieldname": "tin",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "TIN Number",
+   "read_only": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_rpiux",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_4yod6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Data",
+   "label": "Phone Number"
+  }
+ ],
+ "image_field": "image",
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "make_attachments_public": 1,
+ "modified": "2023-10-15 07:07:22.764748",
+ "modified_by": "Administrator",
+ "module": "Gra",
+ "name": "TIN Application",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "route": "http://127.0.0.1:82/tin",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
